@@ -1,0 +1,170 @@
+/* General styles */
+body {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    background-color: #e8f4ea;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin: 5vh 0;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: clamp(36px, 5vw, 72px);
+    letter-spacing: clamp(2px, 1vw, 9px);
+    color: #000;
+    font-weight: 300;
+    text-align: right;
+    margin: 5vh auto;
+    padding-right: 20px; /* Ensure alignment with accordion */
+    max-width: 1200px; /* Same as section */
+}
+
+h2 {
+    font-size: clamp(18px, 3vw, 24px);
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 400;
+    color: #000;
+}
+
+p {
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: clamp(16px, 2vw, 18px);
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Accordion button styles */
+.accordion {
+    background-color: #e0f0e3;
+    color: rgb(86, 86, 86);
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: clamp(16px, 2vw, 20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    margin-bottom: 5px;
+}
+
+.accordion:hover {
+    background-color: #7c7c7c;
+    color: #fff;
+}
+
+.accordion:after {
+    content: '\25BC';
+    font-size: clamp(12px, 1.5vw, 16px);
+    transition: transform 0.3s ease;
+}
+
+.accordion.active:after {
+    transform: rotate(-180deg);
+}
+
+.panel {
+    padding: 10px 20px;
+    background-color: #fff;
+    margin: 10px auto;
+    display: none;
+    overflow: hidden;
+    border-left: 4px solid #b8d8be;
+}
+
+.accordion.active {
+    background-color: #7c7c7c;
+    color: #fff;
+}
+
+a {
+    color: #00a1a1;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #00ff99;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    h1 {
+        text-align: center;
+        margin: 40px auto;
+        padding-right: 0;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        text-align: left;
+        margin: 10px auto;
+    }
+
+    .accordion {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 14px;
+        margin-top: 30px;
+    }
+
+    .accordion {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .panel {
+        padding: 8px;
+    }
+}

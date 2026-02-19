@@ -4,7 +4,12 @@
 
 ---
 
-## **Information Architect | Senior Technical Writer – Nozomi Networks, Switzerland (Remote) (Jul 2022 – Present)**
+## **Staff Technical Writer | Information Architect – Nozomi Networks, Switzerland (Remote) (Jan 2026 – Present)**
+
+* Implemented GitHub Copilot AI assistant into the Technical Documentation workflow.
+* Added the codebase to the Technical Documentation workspace in VS Code to permit direct extraction of information from the codebases.
+
+## **Information Architect | Senior Technical Writer – Nozomi Networks, Switzerland (Remote) (Jul 2022 – Dec 2025)**
 
 * Lead architect for the full technical documentation ecosystem across multiple cybersecurity product lines (Vantage, Guardian, Arc, Guardian Air, Remote Collector, Asset Intelligence).
 * Designed and implemented a modular, topic-based documentation architecture using DITA XML and Oxygen XML Author, expanding deliverables from three PDFs to an HTML web portal plus more than 25 PDF manuals.
@@ -119,6 +124,5 @@
 
 * **Status:** Swiss Resident (C Permit)
 * **Date of birth:** 19 April 1969
-* **Marital status:** Divorced
 * **Hobbies:** Technology, sailing, sculpture, photography, reading.
-* **Languages:** English (Mother tongue), German (A2), Italian (basic).
+* **Languages:** English (Mother tongue), German (A2), Italian (A2).

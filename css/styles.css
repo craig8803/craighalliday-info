@@ -72,12 +72,16 @@ p {
 
 .accordion:after {
     content: '\25BC';
-    font-size: clamp(12px, 1.5vw, 16px);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 1;
+    margin-left: 10px;
+    transform: rotate(-90deg);
     transition: transform 0.3s ease;
 }
 
 .accordion.active:after {
-    transform: rotate(-180deg);
+    transform: rotate(0deg);
 }
 
 .panel {

@@ -6,13 +6,17 @@
 
 ## **Staff Technical Writer | Information Architect – Nozomi Networks, Switzerland (Remote) (Jan 2026 – Present)**
 
+* Responsible for the complete <a href="https://technicaldocs.nozominetworks.com" target="_blank" rel="noopener noreferrer">cybersecurity product documentation suite</a>.
 * Built custom instructions and GitHub agents for GitHub Copilot.
+* Built an end-to-end RAG pipeline (chunking, embedding, vector database, and prompt orchestration) to turn product documentation into an AI-queryable knowledge system built into the product.
 * Integrated GitHub Copilot into the full documentation workflow, including direct codebase analysis within VS Code for accurate, code-sourced documentation.
 
 ## **Information Architect | Senior Technical Writer – Nozomi Networks, Switzerland (Remote) (Jul 2022 – Dec 2025)**
 
+* Responsible for the complete <a href="https://technicaldocs.nozominetworks.com" target="_blank" rel="noopener noreferrer">cybersecurity product documentation suite</a>.
 * Lead architect for the full technical documentation ecosystem across multiple cybersecurity product lines (Vantage, Guardian, Arc, Guardian Air, Remote Collector, Asset Intelligence).
 * Designed and implemented a modular, topic-based documentation architecture using DITA XML and Oxygen XML Author, expanding deliverables from three PDFs to an HTML web portal plus more than 25 PDF manuals.
+* Optimized processes to enable the department to operate with one person instead of three despite the addition of three new products and an increased software release cadence.
 * Developed a Retrieval-Augmented Generation (RAG) system and supporting Python pipeline to enable an AI chatbot interface to technical documentation content.
 * Built custom HTML/CSS styling frameworks for web output and product-specific PDF templates.
 * Authored and enforced the company-wide technical writing and UI string style guide, aligned with the Microsoft Style Guide and tailored for multinational software engineering teams.
@@ -110,9 +114,32 @@
 
 ## **Software Skills**
 
+* AI-assisted authoring (GitHub Copilot, Claude, ChatGPT)
+* Hugo
+* Docs-as-code
+* Git / GitHub
+* TechSmith SnagIt
+* Oxygen XML Author (DITA XML)
+* Cascading Style Sheets (CSS)
+* MadCap Flare
+* Adobe FrameMaker (structured and unstructured)
+* Markdown
+* Unity 3D
+* PTC Arbortext Epic Editor
+* Atlassian Jira
+* Confluence
+* YouTrack
+* Arbortext IsoDraw 7 + CADprocess
+* Adobe Illustrator
+* Microsoft Office
+* Luxion KeyShot
+* Shapr3D CAD modelling
+
 ---
 
 ## **Education**
+
+* Princess Marina College - Engineering Apprenticeship (1986 - 1988)
 
 * **King David School, Liverpool, UK (1974 – 1985)**
 

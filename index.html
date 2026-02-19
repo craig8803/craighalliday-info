@@ -23,7 +23,9 @@
     <section>
         <button class="accordion">Staff Technical Writer | Information Architect -  Nozomi Networks, Switzerland (Jan 2026 - Present)</button>
         <div class="panel">
+            <p>Responsible for the complete <a href="https://technicaldocs.nozominetworks.com" target="_blank" rel="noopener noreferrer">cybersecurity product documentation suite</a>.</p>
             <p>Built custom instructions and GitHub agents for GitHub Copilot.</p>
+            <p>Built an end-to-end RAG pipeline (chunking, embedding, vector database, and prompt orchestration) to turn product documentation into an AI-queryable knowledge system built into the product.</p>
             <p>Integrated GitHub Copilot into the full documentation workflow, including direct codebase analysis within VS Code for accurate, code-sourced documentation.</p>
         </div>
     </section>
@@ -31,9 +33,10 @@
     <section>
         <button class="accordion">Senior Technical Writer | Information Architect -  Nozomi Networks, Switzerland (Jul 2022 - Dec 2025)</button>
         <div class="panel">
-            <p>Responsible for the creation of all Technical Documentation for the complete product suite.</p>
+            <p>Responsible for the complete <a href="https://technicaldocs.nozominetworks.com" target="_blank" rel="noopener noreferrer">cybersecurity product documentation suite</a>.</p>
             <p>Re-achitected 10 years' worth of technical documentation to maximize benefits of Dita XML.</p>
             <p>Rewrote the documentation to use correct topic-based structure.</p>
+            <p>Optimized processes to enable the department to operate with one person instead of three despite the addition of three new products and an increased software release cadence.</p>
             <p>Increased output from 3 PDFs to a web-responsive, <a href="https://technicaldocs.nozominetworks.com">HTML5 knowledge base</a> and approximately 25 <a href="https://technicaldocs.nozominetworks.com/resources/print-docs/r_print-manuals_all.html">PDFs</a>.</p>
              </div>
     </section>
@@ -128,7 +131,7 @@
     <section>
         <button class="accordion">Aircraft Technician – British Army (Jan 1986 - Oct 1999)</button>
         <div class="panel">
-            <p>Major over´haul and line maintenance of Lynx and Gazelle helicopters. Served as Crew Chief in charge of six men. Employed in the engineering control office as Customer Support.</p>
+            <p>Major overhaul and line maintenance of Lynx and Gazelle helicopters. Served as Crew Chief in charge of six men. Employed in the engineering control office as Customer Support.</p>
             <p>Employed in engineering control office as Customer Support between the unit and outside agencies on technical problems.</p>
         </div>
     </section>
@@ -149,6 +152,11 @@
     <section>
         <button class="accordion">Software Skills</button>
         <div class="panel">
+                <p>AI-assisted authoring (GitHub Copilot, Claude, ChatGPT)</p>
+            <p>Hugo</p>
+            <p>Docs-as-code</p>
+            <p>Git / GitHub</p>
+            <p>TechSmith SnagIt</p>
                 <p>Oxygen XML Author (DITA XML)</p>
                 <p>Cascading Style Sheets (CSS)</p>
                 <p>MadCap Flare</p>
@@ -170,6 +178,7 @@
     <section>
         <button class="accordion">Education</button>
         <div class="panel">
+            <p>Princess Marina College - Engineering Apprenticeship (1986 - 1988)</p>
             <p>King David School, Liverpool, UK (1974 – 1985)</p>
             <p>Nine GCE ‘O’ Levels including: English Language, Physics, Technical Drawing, and Mathematics.</p>
         </div>
@@ -201,6 +210,13 @@
                 }
             });
         });
+
+        if (accordions.length > 0) {
+            const firstAccordion = accordions[0];
+            const firstPanel = firstAccordion.nextElementSibling;
+            firstAccordion.classList.add('active');
+            firstPanel.style.display = 'block';
+        }
     </script>
 </body>
 </html>

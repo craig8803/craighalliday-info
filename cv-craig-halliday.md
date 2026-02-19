@@ -6,7 +6,7 @@
 
 ## **Staff Technical Writer | Information Architect – Nozomi Networks, Switzerland (Remote) (Jan 2026 – Present)**
 
-* Built custom instructions and GitHub agents for GitHub Copilot, delivering over $1M in documented cost savings through automated release notes generation and documentation workflow optimisation.
+* Built custom instructions and GitHub agents for GitHub Copilot.
 * Integrated GitHub Copilot into the full documentation workflow, including direct codebase analysis within VS Code for accurate, code-sourced documentation.
 
 ## **Information Architect | Senior Technical Writer – Nozomi Networks, Switzerland (Remote) (Jul 2022 – Dec 2025)**

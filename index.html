@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio and CV of Craig Halliday, Staff Technical Writer and Information Architect specializing in docs-as-code, AI-assisted authoring, and cybersecurity documentation.">
+    <meta name="keywords" content="Craig Halliday, technical writer, information architect, docs-as-code, GitHub Copilot, cybersecurity documentation, DITA XML, ChromaDB vector database, AI documentation">
+    <meta name="author" content="Craig Halliday">
+    <meta property="og:title" content="Craig Halliday – Staff Technical Writer & Information Architect">
+    <meta property="og:description" content="Explore Craig Halliday's technical writing experience, AI documentation workflows, and software skills across aerospace, cybersecurity, and emerging tech.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://craighalliday.info/">
+    <meta property="og:image" content="https://craighalliday.info/img/craigLogo.svg">
     <title>craig halliday</title>
     <link  rel="stylesheet" href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro">            
     <link rel="stylesheet" href="css/styles.css">
@@ -18,6 +26,21 @@
         <h1>craig halliday</h1>
         <img src="img/craigLogo.svg" width="90pc" alt="logo">
         <h2>staff technical writer &nbsp; | &nbsp; information architect</h2>
+        <div class="social-links">
+            <a class="social-link" href="https://www.linkedin.com/in/craig-halliday-5096712b/?originalSubdomain=ch" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                    <path d="M22.225 0H1.771A1.77 1.77 0 000 1.729v20.542A1.77 1.77 0 001.771 24h20.451A1.77 1.77 0 0024 22.271V1.729A1.77 1.77 0 0022.225 0zM7.119 20.452H3.553V9h3.566zM5.337 7.433a2.062 2.062 0 110-4.124 2.062 2.062 0 010 4.124zM20.447 20.452h-3.554V14.83c0-1.342-.028-3.07-1.873-3.07-1.873 0-2.159 1.46-2.159 2.969v5.723H9.307V9h3.414v1.561h.049c.476-.9 1.637-1.848 3.37-1.848 3.601 0 4.268 2.37 4.268 5.455z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="accordion-controls">
+            <button class="accordion-control expand-all" type="button" aria-label="Expand all sections">
+                <span class="control-icon">&#x25BC;</span>
+            </button>
+            <button class="accordion-control collapse-all" type="button" aria-label="Collapse all sections">
+                <span class="control-icon rotate-90">&#x25BC;</span>
+            </button>
+        </div>
     </header>
 
     <section>
@@ -157,6 +180,7 @@
             <p>Docs-as-code</p>
             <p>Git / GitHub</p>
             <p>TechSmith SnagIt</p>
+                <p>ChromaDB vector database</p>
                 <p>Oxygen XML Author (DITA XML)</p>
                 <p>Cascading Style Sheets (CSS)</p>
                 <p>MadCap Flare</p>
@@ -187,7 +211,7 @@
     <section>
         <button class="accordion">Personal Details</button>
         <div class="panel">
-            <p>Status: Swiss Resident (C Permit)</p>
+            <p>Status: UK National | Swiss Resident (C Permit)</p>
             <p>Date of birth: 19 April 1969</p>
             <p>Hobbies: Technology, sailing, sculpture, photography, reading.</p>
             <p>Languages: English (Mother tongue), German (A2), Italian (A2).</p>
@@ -197,6 +221,33 @@
     <script>
         // JavaScript to handle accordion functionality
         const accordions = document.querySelectorAll('.accordion');
+        const expandAllBtn = document.querySelector('.expand-all');
+        const collapseAllBtn = document.querySelector('.collapse-all');
+
+        function updateControlState() {
+            const openCount = Array.from(accordions).filter(acc => acc.classList.contains('active')).length;
+            const allOpen = openCount === accordions.length && accordions.length > 0;
+            const allClosed = openCount === 0;
+
+            if (expandAllBtn) {
+                expandAllBtn.disabled = allOpen;
+                expandAllBtn.setAttribute('aria-disabled', String(allOpen));
+            }
+
+            if (collapseAllBtn) {
+                collapseAllBtn.disabled = allClosed;
+                collapseAllBtn.setAttribute('aria-disabled', String(allClosed));
+            }
+        }
+
+        function setAccordionState(isOpen) {
+            accordions.forEach(accordion => {
+                const panel = accordion.nextElementSibling;
+                accordion.classList.toggle('active', isOpen);
+                panel.style.display = isOpen ? 'block' : 'none';
+            });
+            updateControlState();
+        }
 
         accordions.forEach(accordion => {
             accordion.addEventListener('click', function() {
@@ -208,15 +259,26 @@
                 } else {
                     panel.style.display = "block";
                 }
+
+                updateControlState();
             });
         });
 
-        if (accordions.length > 0) {
-            const firstAccordion = accordions[0];
-            const firstPanel = firstAccordion.nextElementSibling;
-            firstAccordion.classList.add('active');
-            firstPanel.style.display = 'block';
+        if (expandAllBtn) {
+            expandAllBtn.addEventListener('click', () => setAccordionState(true));
         }
+
+        if (collapseAllBtn) {
+            collapseAllBtn.addEventListener('click', () => setAccordionState(false));
+        }
+
+        if (accordions.length > 0) {
+            setAccordionState(false);
+            accordions[0].classList.add('active');
+            accordions[0].nextElementSibling.style.display = 'block';
+        }
+
+        updateControlState();
     </script>
 </body>
 </html>

@@ -10,13 +10,105 @@ body {
 
 header {
     text-align: center;
-    margin: 5vh 0;
+    margin: 5vh 0 3vh;
+}
+
+.accordion-controls {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 12px auto 0;
+    padding: 0 20px;
+}
+
+.accordion-control {
+    background-color: #d0d0d0;
+    border: 1px solid #bcbcbc;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.accordion-control:hover {
+    background-color: #7c7c7c;
+    border-color: #7c7c7c;
+}
+
+.accordion-control:hover .control-icon {
+    color: #fff;
+}
+
+.accordion-control:disabled,
+.accordion-control:disabled:hover {
+    background-color: #efefef;
+    border-color: #dcdcdc;
+    cursor: not-allowed;
+}
+
+.accordion-control:disabled .control-icon {
+    color: #b3b3b3;
+}
+
+.control-icon {
+    font-size: 22px;
+    line-height: 1;
+    color: #4f4f4f;
+}
+
+.rotate-90 {
+    display: inline-block;
+    transform: rotate(-90deg);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-link {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #cfcfcf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.social-link svg {
+    width: 22px;
+    height: 22px;
+    fill: #7a7a7a;
+    transition: fill 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #e5e5e5;
+    border-color: #7c7c7c;
+}
+
+.social-link:hover svg {
+    fill: #4a4a4a;
 }
 
 section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px 20px 20px;
+}
+
+section:first-of-type {
+    padding-top: 5px;
 }
 
 h1 {

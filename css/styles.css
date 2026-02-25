@@ -81,6 +81,9 @@ body::after {
     left: 0;
     width: 100vw;
     height: 100vh;
+    display: block;
+    margin: 0;
+    padding: 0;
     pointer-events: none;
     z-index: -1;
     mix-blend-mode: screen;
@@ -304,6 +307,14 @@ p {
     overflow: hidden;
     border-left: 4px solid rgba(0, 198, 255, 0.32);
     border-radius: 0 0 16px 16px;
+}
+
+.credential-entry {
+    margin-bottom: 18px;
+}
+
+.credential-entry:last-of-type {
+    margin-bottom: 0;
 }
 
 .accordion.active {

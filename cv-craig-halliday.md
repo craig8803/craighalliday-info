@@ -110,6 +110,14 @@
 
 ## **Professional Development and Education**
 
+* Google UX Design Coursera online (2021)
+* Udacity Nanodegree - Virtual Reality Developer online training (2018)
+* Teamcenter Basic Training, Stans, Switzerland (2018)
+* SolidWorks Composer training course, Ennetbürgen (2014)
+* Technical Authorship and Communication, Chippenham College (1999)
+* BTEC OND in Aerospace Engineering, Princess Marina Army Apprentice College, Arborfield, Berkshire, UK (1986 - 1987)
+* Lynx and Gazelle helicopter equipment course, School of Aeronautical Engineering, Middle Wallop, UK (1988)
+
 ---
 
 ## **Software Skills**
@@ -134,6 +142,7 @@
 * Microsoft Office
 * Luxion KeyShot
 * Shapr3D CAD modelling
+* ChromaDB vector database
 
 ---
 
@@ -144,6 +153,35 @@
 * **King David School, Liverpool, UK (1974 – 1985)**
 
   * Nine GCE ‘O’ Levels including: English Language, Physics, Technical Drawing, and Mathematics.
+
+---
+
+## **Licenses & Certifications**
+
+* **Prompt Engineering and AI Agents with ChatGPT** — LinkedIn (Issued Dec 2025). Skills: ChatGPT, Prompt Engineering.
+* **Dieter Rams: Principles of Good Design** — LinkedIn (Issued Dec 2025). Skills: Product Design.
+* **Build AI Agents and Automate Workflows with n8n** — LinkedIn (Issued Dec 2025). Skills: AI Productivity.
+* **Introduction to Neo4j** — LinkedIn (Issued Oct 2025). Skills: Neo4j.
+* **Pirates of the Cyber Eon** — University of Cambridge Professional and Continuing Education (Issued Aug 2025). Skills: Hackers.
+* **Espionage, Terrorism and Warfare in the Cyber Era** — University of Cambridge Professional and Continuing Education (Issued Aug 2025). Skills: Cybersecurity.
+* **RAG and Fine-Tuning Explained** — LinkedIn (Issued Jul 2025). Skills: Generative AI, Retrieval-Augmented Generation (RAG), AI Software Development.
+* **Irreplaceable: The Art of Standing Out in the Age of AI** — LinkedIn (Issued May 2025). Skills: Personal Branding.
+* **Agentic Artificial Intelligence: Harnessing AI Agents to Reinvent Business, Work, and Life** — LinkedIn (Issued May 2025). Skills: AI Agents, Artificial Intelligence for Business.
+* **AI for Design Systems: How to Stay Ahead and Lead** — Interaction Design Foundation. Skills: Design Systems, AI Strategy.
+* **How to Design with and for Artificial Intelligence** — Interaction Design Foundation. Skills: Human-AI Interaction.
+* **How to Use Card Sorting for Better Information Architecture** — Interaction Design Foundation (Issued Feb 2023). Skills: Information Architecture.
+* **UX Writing: How to Use Words as a Design Power Tool** — Interaction Design Foundation (Issued Feb 2023). Skills: UX Writing.
+* **Git Essential Training: The Basics** — LinkedIn (Issued Jul 2022). Skills: Git, Version Control.
+* **UX Foundations: Content Strategy** — LinkedIn (Issued Jul 2022). Skills: Content Strategy.
+* **IoT Foundations: Fundamentals** — LinkedIn (Issued Jun 2022). Skills: Internet of Things.
+* **Introduction to Digital Twins** — LinkedIn (Issued Jun 2022). Skills: Digital Twins.
+* **Learning Git and GitHub** — LinkedIn (Issued May 2022). Skills: Git, GitHub.
+* **Google UX Design: Conduct UX Research and Test Early Concepts** — Coursera (Issued Jul 2021). Skills: UX Research.
+* **Google UX Design: Build Wireframes and Low-Fidelity Prototypes** — Coursera (Issued Jun 2021). Skills: Wireframing, Prototyping.
+* **Google UX Design: Start the UX Design Process: Empathize, Define, and Ideate** — Coursera (Issued May 2021). Skills: UX Design Process.
+* **Google UX Design: Foundations of User Experience (UX) Design** — Coursera (Issued Apr 2021). Skills: UX Foundations.
+* **Understanding Information Architecture** — LinkedIn (Issued Sep 2020). Skills: Information Architecture.
+* **Gemba Kaizen: A Commonsense Approach to Continuous Improvement (Blinkist Summary)** — LinkedIn (Issued Sep 2020). Skills: Continuous Improvement.
 
 ---
 

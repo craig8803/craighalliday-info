@@ -20,7 +20,7 @@
 
 </head>
 <body>
-    
+    <canvas id="matrixRain" aria-hidden="true"></canvas>
     
     <header>
         <h1>craig halliday</h1>
@@ -279,6 +279,95 @@
         }
 
         updateControlState();
+    </script>
+    <script>
+        (function initMatrixRain() {
+            const canvas = document.getElementById('matrixRain');
+            if (!canvas) {
+                return;
+            }
+
+            const ctx = canvas.getContext('2d');
+            const glyphs = [
+                '<dita>', '<xml>', '<info>', '<task>', '<topic>', '<concept>', '<reference>', '<map>', '<topicref>',
+                '<conref>', '<keyref>', '<xref>', '<ph>', '<title>', '<shortdesc>', '<body>', '<taskbody>',
+                '<steps>', '<step>', '<result>', '<choice>', '<fn>', '<figure>', '<table>', '<glossentry>',
+                '<mapref>', '<topichead>', '<topicgroup>', '<navtitle>', '<linktext>', '<kb>', '<api>', '<docs>',
+                '<rag>', '<vector>', '<oxygen>', '<copilot>', '<schema>', '<glossary>', '<prompt>', '{ai}', '</>',
+                '1010', '0101', '0110', '1101', '<cli>', '<md>', '<docx>', '<dita-ot>', '<cms>', '<ia>', '<dita-map>'
+            ];
+
+            let viewWidth = window.innerWidth;
+            let viewHeight = window.innerHeight;
+            let fontSize = 18;
+            let columns = 0;
+            let drops = [];
+            let glyphCache = [];
+            let glyphTimers = [];
+
+            const backgroundFade = 0.15;
+            const speedFactor = 0.075;
+
+            const setCanvasSize = () => {
+                viewWidth = window.innerWidth;
+                viewHeight = window.innerHeight;
+                const pixelRatio = window.devicePixelRatio || 1;
+
+                canvas.width = viewWidth * pixelRatio;
+                canvas.height = viewHeight * pixelRatio;
+                canvas.style.width = '100vw';
+                canvas.style.height = '100vh';
+
+                ctx.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+
+                fontSize = Math.max(14, Math.min(26, viewWidth / 45));
+                ctx.font = `${fontSize}px 'JetBrains Mono', 'Consolas', 'Courier New', monospace`;
+                ctx.textBaseline = 'top';
+
+                columns = Math.ceil(viewWidth / (fontSize * 1.05));
+                drops = Array.from({ length: columns }, () => Math.random() * (viewHeight / fontSize));
+                glyphCache = Array.from({ length: columns }, () => glyphs[Math.floor(Math.random() * glyphs.length)]);
+                glyphTimers = Array.from({ length: columns }, () => 0);
+            };
+
+            const draw = () => {
+                ctx.fillStyle = `rgba(1, 7, 15, ${backgroundFade})`;
+                ctx.fillRect(0, 0, viewWidth, viewHeight);
+
+                ctx.fillStyle = 'rgba(0, 255, 157, 0.8)';
+
+                for (let i = 0; i < columns; i += 1) {
+                    if (glyphTimers[i] <= 0) {
+                        glyphCache[i] = glyphs[Math.floor(Math.random() * glyphs.length)];
+                        glyphTimers[i] = 12 + Math.floor(Math.random() * 18);
+                    }
+                    glyphTimers[i] -= 1;
+
+                    const text = glyphCache[i];
+                    const x = i * fontSize;
+                    const y = drops[i] * fontSize;
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.rotate(-Math.PI / 2);
+                    ctx.fillText(text, 0, 0);
+                    ctx.restore();
+
+                    if (y > viewHeight && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    } else {
+                        drops[i] += speedFactor;
+                    }
+                }
+
+                requestAnimationFrame(draw);
+            };
+
+            setCanvasSize();
+            draw();
+
+            window.addEventListener('resize', setCanvasSize);
+            window.addEventListener('orientationchange', setCanvasSize);
+        })();
     </script>
 </body>
 </html>

@@ -1,94 +1,32 @@
 /* General styles */
 body {
     font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
-    color: #333;
+    color: #c0bfca;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     min-height: 100vh;
-    background-color: #020b16;
+    background-color: #1e1e26;
     background-image:
-        radial-gradient(circle at 20% 20%, rgba(0, 255, 191, 0.12), transparent 55%),
-        radial-gradient(circle at 80% 0%, rgba(0, 145, 255, 0.08), transparent 50%),
-        linear-gradient(130deg, #01070f 0%, #041b28 55%, #020b16 100%);
+        radial-gradient(circle at 96% 4%, rgba(255, 120, 0, 0.08), transparent 36%),
+        radial-gradient(circle at 4% 96%, rgba(255, 120, 0, 0.04), transparent 40%),
+        repeating-linear-gradient(
+            45deg,
+            transparent 0px,
+            transparent 3px,
+            rgba(255, 255, 255, 0.1) 3px,
+            rgba(255, 255, 255, 0.1) 4px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            transparent 0px,
+            transparent 3px,
+            rgba(0, 0, 0, 0.45) 3px,
+            rgba(0, 0, 0, 0.45) 4px
+        );
+    background-size: auto, auto, 8px 8px, 8px 8px;
     background-attachment: fixed;
     overflow-x: hidden;
-    position: relative;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image:
-        linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 255, 149, 0.18) 55%, rgba(0, 0, 0, 0.45) 100%),
-        repeating-linear-gradient(90deg, rgba(0, 255, 170, 0.12) 0 2px, transparent 2px 120px),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='360'%3E%3Cg fill='%2300ff9d' font-family='Menlo,Monaco,monospace' font-size='16' opacity='0.55'%3E%3Ctext x='10' y='34'%3E1011001100110%3C/text%3E%3Ctext x='60' y='94'%3E0011010011110%3C/text%3E%3Ctext x='120' y='154'%3E0101100110101%3C/text%3E%3Ctext x='30' y='214'%3E1100101001110%3C/text%3E%3Ctext x='90' y='274'%3E0010110110011%3C/text%3E%3Ctext x='150' y='334'%3E0100110010101%3C/text%3E%3C/svg%3E"),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='420'%3E%3Cg fill='%2300ffe0' font-family='Menlo,Monaco,monospace' font-size='18' opacity='0.55' letter-spacing='2'%3E%3Ctext x='20' y='36'%3E%26lt;dita%26gt;%3C/text%3E%3Ctext x='120' y='96'%3E%26lt;xml%26gt;%3C/text%3E%3Ctext x='30' y='156'%3E%26lt;info%26gt;%3C/text%3E%3Ctext x='150' y='216'%3E%26lt;task%26gt;%3C/text%3E%3Ctext x='40' y='276'%3E%26lt;markdown%26gt;%3C/text%3E%3Ctext x='140' y='336'%3E%26lt;docs-as-code%26gt;%3C/text%3E%3Ctext x='10' y='396'%3E%26lt;tech-writer%26gt;%3C/text%3E%3C/svg%3E");
-    background-size:
-        100% 100%,
-        180px 100%,
-        220px 360px,
-        260px 420px;
-    background-position: 0 0, 0 0, 0 0, 0 0;
-    mix-blend-mode: screen;
-    opacity: 0.95;
-    pointer-events: none;
-    z-index: -2;
-    animation: matrixScroll 28s linear infinite;
-}
-
-body::after {
-    content: '';
-    position: fixed;
-    inset: -12% -25% -5% -25%;
-    background:
-        radial-gradient(circle at 70% 12%, rgba(0, 255, 195, 0.26), transparent 55%),
-        radial-gradient(circle at 15% 85%, rgba(0, 140, 255, 0.24), transparent 60%);
-    filter: blur(90px);
-    opacity: 0.9;
-    animation: auroraShift 18s ease-in-out infinite alternate;
-    pointer-events: none;
-    z-index: -1;
-}
-
-@keyframes auroraShift {
-    0% {
-        transform: translate(-5%, -2%) scale(1);
-    }
-    50% {
-        transform: translate(4%, 3%) scale(1.05);
-    }
-    100% {
-        transform: translate(-2%, 4%) scale(0.98);
-    }
-}
-
-@keyframes matrixScroll {
-    0% {
-        background-position: 0 0, 0 0, 0 0, 0 0;
-    }
-    100% {
-        background-position: 0 600px, 0 0, 0 -600px, 0 900px;
-    }
-}
-
-#matrixRain {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: block;
-    margin: 0;
-    padding: 0;
-    pointer-events: none;
-    z-index: -1;
-    mix-blend-mode: screen;
-    filter: drop-shadow(0 0 10px rgba(0, 255, 138, 0.15));
-    opacity: 0.8;
 }
 
 header {
@@ -96,17 +34,17 @@ header {
     margin: 5vh 0 3vh;
     position: relative;
     z-index: 1;
-    color: #eef3ff;
+    color: #f0eff4;
 }
 
-header::before {
+h2::after {
     content: '';
-    position: absolute;
-    inset: -60px 15% auto;
-    height: 180px;
-    background: radial-gradient(circle, rgba(0, 230, 255, 0.22) 0%, rgba(0, 140, 255, 0.15) 55%, transparent 80%);
-    filter: blur(45px);
-    z-index: -1;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #FF7A00;
+    margin: 14px auto 0;
+    border-radius: 2px;
 }
 
 .accordion-controls {
@@ -115,65 +53,54 @@ header::before {
     flex-wrap: wrap;
     gap: 10px;
     max-width: 1200px;
-    margin: 12px auto 0;
+    margin: 20px auto 0;
     padding: 0 20px;
 }
 
 .accordion-control {
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     width: 44px;
     height: 44px;
-    border-radius: 14px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
-    animation: controlPulse 6s ease-in-out infinite;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 
 .accordion-control:hover {
-    background: linear-gradient(135deg, rgba(0, 230, 255, 0.3), rgba(0, 140, 255, 0.24));
-    border-color: rgba(0, 212, 255, 0.7);
+    background: rgba(255, 122, 0, 0.18);
+    border-color: rgba(255, 122, 0, 0.6);
     transform: translateY(-2px);
 }
 
 .accordion-control:hover .control-icon {
-    color: #fff;
+    color: #FF7A00;
 }
 
 .accordion-control:disabled,
 .accordion-control:disabled:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.06);
     cursor: not-allowed;
-    animation: none;
+    transform: none;
 }
 
 .accordion-control:disabled .control-icon {
-    color: #b3b3b3;
+    color: #444450;
 }
 
 .control-icon {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1;
-    color: #e2f7ff;
+    color: #a0a0b0;
 }
 
 .rotate-90 {
     display: inline-block;
     transform: rotate(-90deg);
-}
-
-@keyframes controlPulse {
-    0%, 100% {
-        box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25), 0 0 0 rgba(0, 255, 255, 0);
-    }
-    50% {
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35), 0 0 16px rgba(0, 255, 255, 0.25);
-    }
 }
 
 .social-links {
@@ -186,31 +113,31 @@ header::before {
 .social-link {
     width: 48px;
     height: 48px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
-    background: rgba(255, 255, 255, 0.08);
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(6px);
 }
 
 .social-link svg {
     width: 22px;
     height: 22px;
-    fill: #d7def8;
-    transition: fill 0.3s ease;
+    fill: #a0a0b0;
+    transition: fill 0.25s ease;
 }
 
 .social-link:hover {
-    background: linear-gradient(135deg, rgba(0, 230, 255, 0.3), rgba(0, 140, 255, 0.24));
-    border-color: rgba(0, 212, 255, 0.6);
+    background: rgba(255, 122, 0, 0.18);
+    border-color: rgba(255, 122, 0, 0.6);
     transform: translateY(-2px);
 }
 
 .social-link:hover svg {
-    fill: #ffffff;
+    fill: #FF7A00;
 }
 
 section {
@@ -221,9 +148,7 @@ section {
     z-index: 1;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.04);
-    border-radius: 22px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 20px 45px rgba(5, 6, 10, 0.6);
+    border-radius: 16px;
 }
 
 section:first-of-type {
@@ -232,99 +157,123 @@ section:first-of-type {
 
 h1 {
     font-size: clamp(36px, 5vw, 72px);
-    letter-spacing: clamp(2px, 1vw, 9px);
-    color: #eef3ff;
-    font-weight: 400;
+    letter-spacing: clamp(4px, 1.2vw, 12px);
+    color: #f0eff4;
+    font-weight: 300;
     text-align: right;
     margin: 5vh auto;
-    padding-right: 20px; /* Ensure alignment with accordion */
-    max-width: 1200px; /* Same as section */
+    padding-right: 20px;
+    max-width: 1200px;
+    text-transform: uppercase;
 }
 
 h2 {
-    font-size: clamp(18px, 3vw, 24px);
-    letter-spacing: 2px;
+    font-size: clamp(13px, 2vw, 16px);
+    letter-spacing: 3px;
     text-align: center;
     font-weight: 400;
-    color: #c5cee5;
+    color: #7a7a8a;
+    text-transform: uppercase;
+}
+
+.title-teal {
+    color: #00ffff;
+}
+
+.title-green {
+    color: #00ff99;
 }
 
 p {
     text-align: left;
     max-width: 800px;
     margin: 20px auto;
-    font-size: clamp(16px, 2vw, 18px);
-    color: #666;
-    line-height: 1.5;
+    font-size: clamp(15px, 1.8vw, 17px);
+    color: #9090a0;
+    line-height: 1.7;
 }
 
 /* Accordion button styles */
 
 .accordion {
-    background: rgba(8, 10, 16, 0.65);
-    color: #dfe5ff;
+    background: rgba(22, 22, 28, 0.9);
+    color: #d8d7e2;
     cursor: pointer;
     padding: 16px 18px;
     width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-left: 3px solid transparent;
     text-align: left;
     outline: none;
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: clamp(15px, 1.8vw, 18px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background 0.3s ease, border-color 0.3s ease;
-    margin-bottom: 8px;
-    border-radius: 14px;
-    box-shadow: 0 14px 30px rgba(6, 6, 10, 0.65);
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    margin-bottom: 6px;
+    border-radius: 10px;
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
 }
 
 .accordion:hover {
-    background: linear-gradient(135deg, rgba(0, 230, 255, 0.12), rgba(0, 140, 255, 0.12));
-    color: #fff;
-    border-color: rgba(0, 212, 255, 0.35);
+    background: rgba(255, 122, 0, 0.07);
+    color: #f0eff4;
+    border-left-color: rgba(255, 122, 0, 0.5);
+    border-top-color: rgba(255, 122, 0, 0.12);
+    border-right-color: rgba(255, 122, 0, 0.12);
+    border-bottom-color: rgba(255, 122, 0, 0.12);
 }
 
 .accordion:after {
     content: '\25BC';
     display: inline-block;
-    font-size: 22px;
+    font-size: 14px;
     line-height: 1;
     margin-left: 10px;
+    color: #FF7A00;
     transform: rotate(-90deg);
     transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
 .accordion.active:after {
     transform: rotate(0deg);
 }
 
+.accordion.active {
+    background: rgba(255, 122, 0, 0.09);
+    color: #f0eff4;
+    border-left-color: #FF7A00;
+    border-top-color: rgba(255, 122, 0, 0.15);
+    border-right-color: rgba(255, 122, 0, 0.15);
+    border-bottom-color: rgba(255, 122, 0, 0.15);
+}
+
 .panel {
-    padding: 14px 22px 24px;
-    background: rgba(255, 255, 255, 0.9);
-    margin: 12px auto;
+    padding: 18px 24px 26px;
+    background: rgba(18, 18, 24, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 3px solid rgba(255, 122, 0, 0.4);
+    margin: 6px 0 10px;
     display: none;
     overflow: hidden;
-    border-left: 4px solid rgba(0, 198, 255, 0.32);
-    border-radius: 0 0 16px 16px;
+    border-radius: 0 0 12px 12px;
 }
 
 .credential-entry {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .credential-entry:last-of-type {
     margin-bottom: 0;
-}
-
-.accordion.active {
-    background: linear-gradient(135deg, rgba(0, 230, 255, 0.09), rgba(0, 140, 255, 0.09));
-    color: #fff;
-    border-color: rgba(0, 212, 255, 0.35);
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 a {
-    color: #00a1a1;
+    color: #00ffff;
     text-decoration: none;
     font-weight: 500;
 }
@@ -358,7 +307,7 @@ a:hover {
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 13px;
     }
 
     section {
@@ -366,13 +315,13 @@ a:hover {
     }
 
     p {
-        font-size: 16px;
+        font-size: 15px;
         text-align: left;
         margin: 10px auto;
     }
 
     .accordion {
-        font-size: 16px;
+        font-size: 15px;
         padding: 12px;
     }
 }
@@ -380,11 +329,11 @@ a:hover {
 @media (max-width: 480px) {
     h1 {
         font-size: 28px;
-        letter-spacing: 1px;
+        letter-spacing: 3px;
     }
 
     h2 {
-        font-size: 14px;
+        font-size: 12px;
         margin-top: 30px;
     }
 
@@ -394,6 +343,6 @@ a:hover {
     }
 
     .panel {
-        padding: 8px;
+        padding: 10px 12px;
     }
 }

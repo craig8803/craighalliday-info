@@ -24,7 +24,7 @@
 * Led the integration of structured content into future-ready AI knowledge platforms (vector databases, knowledge graph foundations, agentic automation models).
 * Advise product teams on UI/UX text, contributing to terminology, clarity, and consistency across multilingual software interfaces.
 * Mentor developers, PMs, and designers on effective content design, documentation workflow, and intelligent information architecture.
-* Created an internal guide for the company with Obsidian, Markdown and Hugo atatc site generator (SSG).
+* Created an internal guide for the company with Obsidian, Markdown and Hugo static site generator (SSG).
 
 ---
 
@@ -41,7 +41,7 @@
 
 ---
 
-## **Founder – Craig Halliday Publications, Switzerland (2015 – Present)**
+## **Founder – Craig Halliday Publications, Switzerland (2015 – 2022)**
 
 * Founded a company specializing in **Technical Authoring**, **Technical Illustration**, **3D Visualization**, and **3D Animation**.
 
